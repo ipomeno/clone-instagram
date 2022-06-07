@@ -5,6 +5,7 @@
   font-family: sans-serif;
   font-size: 14px;
   list-style: none;
+  text-decoration: none;
 }
 
 body {
@@ -13,17 +14,13 @@ body {
   background-color: #f8f8f8;
   margin: 0;
   padding: 0;
-
-  /*** centraliza a página ***/
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .page-container {
   /** cria a página com 60% de largura ***/
-  width: 60%;
+  width: 40%;
   min-height: 100vh;
+  margin: 0 auto;
 
   /*** centraliza o conteúdo dela ***/
   display: flex;
@@ -35,15 +32,112 @@ body {
   /*** cria duas colunas no centro da tela ***/
   flex-grow: 1;
   flex-shrink: 1;
-  min-height: 100vh;
+  height: 700px;
+  width: 50%;
 }
 
 /*** colorindo para diferenciar as colunas ***/
 .page-left {
-  background-color: blue;
-  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-left img {
+  position: relative;
+  top: -20px;
+  height: 57rem;
 }
 
 .page-right {
-  background-color: khaki;
+  /*** distribui os grupos com espaços em volta ***/
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.page-right .group {
+  border: 1px solid lightgray;
+  background-color: #fff;
+  width: 100%;
+  padding: 1.3rem;
+
+  /*** centraliza tudo como uma única coluna ***/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logo {
+  height: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.profile-image {
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 2rem 0;
+}
+
+.profile-image img {
+  height: 6rem;
+}
+
+.group .link-login, 
+.group .link-logout,
+.group .link-blue {
+  font-weight: 600;
+  color: #0095f6;
+}
+
+.group .link-login, 
+.group .link-logout {
+  margin: 0.8rem 0;
+}
+
+.group .link-login {
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #0095f6;
+  color: #fff;
+}
+
+.group p {
+  color: #b0b0b0;
+  font-weight: 600;
+  line-height: 21px;
+}
+
+.group:nth-child(3) {
+  border: none;
+  background-color: transparent;
+}
+
+.group:nth-child(3) p {
+  color: #101010;
+}
+
+.group .download {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-top: 0.8rem;
+}
+
+.group .download a {
+  height: 3.2rem;
+  width: 11rem;
+  background-size: cover;
+}
+
+.group .download a:nth-child(1) {
+  background-image: url('../img/googleplay-button.png');
+}
+
+.group .download a:nth-child(2) {
+  background-image: url('../img/apple-button.png');
 }
