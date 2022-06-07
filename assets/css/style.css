@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 14px;
+  list-style: none;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+
+  /*** centraliza a página ***/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-container {
+  /** cria a página com 60% de largura ***/
+  width: 60%;
+  min-height: 100vh;
+
+  /*** centraliza o conteúdo dela ***/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-left, .page-right {
+  /*** cria duas colunas no centro da tela ***/
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-height: 100vh;
+}
+
+/*** colorindo para diferenciar as colunas ***/
+.page-left {
+  background-color: blue;
+  color: #fff;
+}
+
+.page-right {
+  background-color: khaki;
+}
