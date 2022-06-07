@@ -32,7 +32,7 @@ body {
   /*** cria duas colunas no centro da tela ***/
   flex-grow: 1;
   flex-shrink: 1;
-  height: 700px;
+  height: 600px;
   width: 50%;
 }
 
@@ -41,6 +41,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.page-left .image-container {
+  background-image: url('../img/instagram-celular.png');
+  background-size: cover;
+  background-position: center;
+  background-position-y: -20px;
+  height: 100%;
+  width: 100%;
 }
 
 .page-left img {
@@ -53,7 +62,7 @@ body {
   /*** distribui os grupos com espaços em volta ***/
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-direction: column;
 }
 
@@ -62,6 +71,7 @@ body {
   background-color: #fff;
   width: 100%;
   padding: 1.3rem;
+  margin: 0.3rem;
 
   /*** centraliza tudo como uma única coluna ***/
   display: flex;
@@ -140,4 +150,50 @@ body {
 
 .group .download a:nth-child(2) {
   background-image: url('../img/apple-button.png');
+}
+
+@media (max-width: 1800px) {
+  .page-container {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .page-container {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1250px) {
+  .page-container {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .page-container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 930px) {
+  .page-container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 800px) {
+  .page-left {
+    display: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .group .download {
+    flex-direction: column;
+  }
+
+  .group .download a {
+    margin: 0.3rem;
+  }
 }
